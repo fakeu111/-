@@ -1,0 +1,159 @@
+/* 学习桌面主题（对齐原型：深墨绿侧栏 + 松绿强调 + 中性灰内容区） */
+QWidget {
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+    font-size: 13px;
+    color: #45504D;
+}
+QMainWindow, QWidget#Central { background: #F6F8F7; }
+
+/* 侧边栏 */
+QFrame#Sidebar { background: #22302C; border: none; }
+QLabel#SidebarLabel { color: #7C8B85; font-size: 11px; background: transparent; }
+QPushButton#NavItem {
+    background: transparent; border: none; border-radius: 8px;
+    color: #AEBAB5; text-align: left; padding: 0;
+}
+QPushButton#NavItem:hover { background: #2B3B36; }
+QPushButton#NavItem:checked { background: #335148; }
+QPushButton#NavItem QLabel { background: transparent; color: #E8EFEC; }
+QPushButton#NavItem QLabel#NavText { font-size: 13px; font-weight: 500; }
+QPushButton#NavItem:checked QLabel { color: #FFFFFF; }
+QPushButton#NavItem:checked QLabel#NavText { font-weight: 600; }
+QLabel#NavCount {
+    background: #3A4B45; color: #C3CDC8; border-radius: 9px;
+    padding: 1px 7px; font-size: 11px; font-weight: 600;
+}
+QPushButton#NavItem:checked QLabel#NavCount { background: #2F8F73; color: #FFFFFF; }
+
+/* 卡片与容器 */
+QFrame.Card { background: #FFFFFF; border: 1px solid #E3E8E5; border-radius: 10px; }
+QLabel#CardTitle { font-size: 14px; font-weight: 700; color: #1F2A2E; background: transparent; }
+QLabel#PageH1 { font-size: 19px; font-weight: 700; color: #1F2A2E; background: transparent; }
+QLabel#PageSub { font-size: 12px; color: #828C88; background: transparent; }
+
+/* 按钮 */
+QPushButton.Btn {
+    background: #FFFFFF; border: 1px solid #E3E8E5; border-radius: 8px;
+    padding: 7px 13px; color: #45504D;
+}
+QPushButton.Btn:hover { border-color: #C9D1CD; background: #FAFCFB; }
+QPushButton.Primary {
+    background: #2F8F73; border: none; border-radius: 8px;
+    padding: 8px 14px; color: #FFFFFF; font-weight: 600;
+}
+QPushButton.Primary:hover { background: #2A8067; }
+QPushButton.Ghost { background: transparent; border: none; border-radius: 8px; padding: 7px 10px; color: #45504D; }
+QPushButton.Ghost:hover { background: #EEF2F0; }
+QPushButton.Danger { background: #FFFFFF; border: 1px solid #F0D2D2; border-radius: 8px; padding: 7px 13px; color: #D14343; }
+
+/* 输入控件 */
+QLineEdit, QComboBox, QTextEdit, QPlainTextEdit, QSpinBox, QDateEdit, QTimeEdit {
+    border: 1px solid #E3E8E5; border-radius: 8px; padding: 6px 9px; background: #FFFFFF; selection-background-color: #BFE0D3;
+}
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus, QDateEdit:focus, QTimeEdit:focus { border: 1px solid #2F8F73; }
+QComboBox::drop-down { border: none; width: 18px; }
+QComboBox QAbstractItemView { border: 1px solid #E3E8E5; selection-background-color: #E7F2ED; selection-color: #1F5E4C; outline: none; }
+
+/* 进度条 */
+QProgressBar { background: #ECEFED; border: none; border-radius: 6px; height: 7px; }
+QProgressBar::chunk { background: #2F8F73; border-radius: 6px; }
+
+/* 徽章 Pill：通过 objectName 区分颜色 */
+QLabel.Pill { border-radius: 9px; padding: 2px 9px; font-size: 11px; font-weight: 600; }
+QLabel#PillOverdue { background: #FBE9E9; color: #D14343; }
+QLabel#PillToday { background: #FBF1DE; color: #E08A1E; }
+QLabel#PillSoon { background: #E7F2ED; color: #1F5E4C; }
+QLabel#PillNone { background: #EFF2F0; color: #828C88; }
+
+/* 列表 / 表格 */
+QListWidget { border: 1px solid #E3E8E5; border-radius: 10px; background: #FFFFFF; outline: none; }
+QListWidget::item { border-bottom: 1px solid #F0F3F1; padding: 0; }
+QListWidget::item:selected { background: #E7F2ED; }
+QTableWidget { border: 1px solid #E3E8E5; border-radius: 10px; background: #FFFFFF; gridline-color: #EEF2F0; outline: none; }
+QHeaderView::section { background: #F3F6F4; border: none; padding: 7px; font-weight: 600; color: #45504D; }
+
+/* 滚动条 */
+QScrollBar:vertical { background: transparent; width: 10px; margin: 2px; }
+QScrollBar::handle { background: #CBD2CE; border-radius: 5px; min-height: 30px; }
+QScrollBar::add-line, QScrollBar::sub-line { height: 0; }
+QScrollBar:horizontal { background: transparent; height: 10px; }
+QScrollBar::handle:horizontal { background: #CBD2CE; border-radius: 5px; min-width: 30px; }
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal { width: 0; }
+
+/* 分组小标签 / 空状态 */
+QLabel#GroupLabel { color: #828C88; font-size: 12px; font-weight: 700; background: transparent; }
+QLabel#EmptyText { color: #828C88; font-size: 13px; background: transparent; }
+QToolTip { background: #263530; color: #EDF2EF; border: none; padding: 5px 8px; }
+
+/* 课程色块（可点击） */
+QPushButton#SesBlock {
+    background: #E7F2ED; border: 1px solid #CFE3DA; border-radius: 6px;
+    text-align: left; padding: 5px 7px;
+}
+QPushButton#SesBlock:hover { background: #D6E8E1; }
+QPushButton#SesBlock QLabel { background: transparent; }
+QLabel#SesName { color: #1F5E4C; font-weight: 700; font-size: 12px; }
+QLabel#SesMeta { color: #4B7A6A; font-size: 11px; }
+
+/* 提示横幅 */
+QLabel#Banner {
+    background: #FBF1DE; color: #8A5E12; border-radius: 8px;
+    padding: 9px 12px; font-size: 12.5px;
+}
+
+/* 周导航 / 工具栏小按钮 */
+QPushButton#ToolIcon { background: transparent; border: none; border-radius: 7px; }
+QPushButton#ToolIcon:hover { background: #E7ECE9; }
+QFrame#TabBar { background: #ECEFED; border-radius: 9px; }
+QPushButton#Tab { background: transparent; border: none; border-radius: 7px; padding: 6px 13px; color: #45504D; }
+QPushButton#Tab:checked { background: #FFFFFF; color: #1F2A2E; font-weight: 600; }
+
+/* 今日计划 */
+QFrame#StatCard { background: #FFFFFF; border: 1px solid #E2E6E4; border-radius: 10px; }
+QLabel#StatBig { font-size: 22px; font-weight: 700; color: #1F2A2E; }
+QLabel#StatSub { color: #6A746F; font-size: 12px; }
+QLabel#SectionLabel { font-size: 12px; color: #5E6964; font-weight: 600; }
+QFrame#TodoRow { background: #FFFFFF; border: 1px solid #E2E6E4; border-radius: 9px; }
+QFrame#TodoRow:hover { border-color: #CBD4D0; }
+QFrame#PriDot { border-radius: 3px; }
+QPushButton#RowIcon { background: transparent; border: none; border-radius: 6px; }
+QPushButton#RowIcon:hover { background: #EDF0EE; }
+QLineEdit#AddInput { background: #FFFFFF; border: 1px solid #D8DDDA; border-radius: 9px; padding: 8px 11px; }
+QLineEdit#AddInput:focus { border-color: #2F8F73; }
+QComboBox#PriCombo { background #FFFFFF; border 1px solid #D8DDDA; border-radius 9px; padding 6px 8px; }
+
+/* 长期计划 */
+QFrame#GoalCard { background: #FFFFFF; border: 1px solid #E2E6E4; border-radius: 10px; }
+QLabel#GoalTitle { font-size: 15px; font-weight: 700; color: #1F2A2E; }
+QLabel#GoalDate { color: #6A746F; font-size: 12px; }
+QLabel#NextTag { background: #E7F2ED; color: #1F5E4C; border-radius: 7px; padding: 2px 8px; font-size: 11px; font-weight: 600; }
+QComboBox#StatusCombo { background: #FFFFFF; border: 1px solid #D8DDDA; border-radius: 8px; padding: 4px 7px; }
+QFrame#MilestoneRow { background: transparent; }
+QLabel#MilestoneDone { color: #98A09B; }
+
+/* 备忘录 */
+QFrame#MemoLeft { background: #F1F4F2; border-right: 1px solid #E2E6E4; }
+QPushButton#MemoItem { background: transparent; border: none; border-radius: 8px; text-align: left; padding: 8px 10px; }
+QPushButton#MemoItem:checked { background: #FFFFFF; }
+QLabel#MemoItemTitle { font-size: 13px; font-weight: 600; color: #1F2A2E; background: transparent; }
+QLabel#MemoItemDue { font-size: 11px; background: transparent; }
+QLineEdit#MemoTitleInput { background: transparent; border: none; font-size: 19px; font-weight: 700; color: #1F2A2E; }
+QPlainTextEdit#MemoBody { background: transparent; border: none; color: #2A3530; font-size: 14px; }
+QPushButton#Swatch { border-radius: 11px; border: 2px solid transparent; }
+QPushButton#Swatch:checked { border: 2px solid #2F8F73; }
+QLineEdit#MemoSearch { background: #FFFFFF; border: 1px solid #D8DDDA; border-radius: 8px; padding: 6px 9px; }
+QDateEdit#MemoDate, QTimeEdit#MemoTime { background: #FFFFFF; border: 1px solid #D8DDDA; border-radius: 8px; padding: 4px 6px; }
+
+/* 首页 */
+QLabel#HomeDateBig { font-size: 26px; font-weight: 800; color: #1F2A2E; }
+QLabel#HomeDateSub { font-size: 13px; color: #6B756F; }
+QFrame#HomeCard { background: #FFFFFF; border: 1px solid #E4E8E6; border-radius: 12px; }
+QLabel#HomeCardTitle { font-size: 15px; font-weight: 700; color: #1F2A2E; }
+QPushButton#CardLink { background: transparent; border: none; color: #2F8F73; font-size: 12px; }
+QLineEdit#HomeQuickAdd { background: #F6F8F7; border: 1px solid #D8DDDA; border-radius: 8px; padding: 7px 10px; }
+QFrame#HomeCourseRow { background: transparent; }
+QLabel#CoursePeriod { font-size: 12px; font-weight: 700; color: #2F8F73; background: #EAF4F0; border-radius: 6px; padding: 2px 7px; }
+QPushButton#UrgentItem { background: transparent; border: none; border-radius: 8px; text-align: left; padding: 7px 9px; }
+QPushButton#UrgentItem:hover { background: #F4F7F5; }
+QLabel#UrgentTitle { font-size: 13px; color: #1F2A2E; background: transparent; }
+QLabel#UrgentBadge { font-size: 11px; background: transparent; }
